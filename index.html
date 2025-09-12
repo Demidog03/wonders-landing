@@ -6,8 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WONDERS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <h1>WONDERS</h1>
+    <div class="input-container">
+        <label>Departure</label>
+        <input id="departure-input" placeholder="Your City/Station" type="text">
+        <ul id="autocomplete-dropdown" class="autocomplete-dropdown hidden">
+        </ul>
+    </div>
 </body>
 </html>
