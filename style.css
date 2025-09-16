@@ -3,6 +3,7 @@
 :root {
     --primary-text-color: #202020;
     --secondary-text-color: #90A3BF;
+    --primary-blue-train: #0578FF;
 }
 
 * {
@@ -12,8 +13,11 @@
     font-family: "Poppins", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
-    padding: 40px;
     background-color: #ececec;
 }
 
@@ -93,4 +97,141 @@ body {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+}
+
+/*HEADER*/
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32.5px;
+    padding-bottom: 32.5px;
+    gap: 96px;
+}
+
+.container {
+    max-width: 1440px;
+    padding-inline: 64px;
+    margin-inline: auto;
+}
+
+.header-logo-image {
+    width: 73px;
+}
+
+.header-logo-text {
+    font-size: 2.125rem;
+    color: var(--primary-text-color);
+}
+
+.header-logo-and-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-navigation {
+    display: flex;
+    gap: 96px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-navigation a {
+    color: var(--primary-text-color);
+    font-size: 1.25rem;
+    transition: color 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.header-navigation a:hover {
+    color: var(--primary-blue-train);
+}
+
+.header-navigation .bold-link {
+    font-weight: 600;
+}
+
+.burger-icon {
+    /*display: flex;*/
+    flex-direction: column;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    gap: 7px;
+    display: none;
+    cursor: pointer;
+}
+
+.burger-icon .line1 {
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-blue-train);
+}
+
+.burger-icon .line2 {
+    width: 16px;
+    height: 2px;
+    background-color: var(--primary-blue-train);
+}
+
+.burger-icon .line3 {
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-blue-train);
+}
+
+.burger-menu {
+    height: calc(100vh - 116px);
+    background-color: var(--primary-blue-train);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.burger-menu nav {
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    padding-inline: 32px;
+}
+
+.burger-menu nav a {
+    color: white;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-navigation {
+        gap: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-inline: 32px;
+    }
+
+    .burger-icon {
+        display: flex;
+    }
+
+    .header-navigation {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .burger-menu nav {
+        margin-top: 64px;
+        gap: 64px;
+    }
+    .burger-menu nav a {
+        font-size: 2rem;
+    }
+}
+
+.hidden {
+    display: none;
 }
